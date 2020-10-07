@@ -52,3 +52,5 @@ If you wish to reset your search, just click anywhere else on the map and click 
 - **Open Weather Map** API
 - **React toastify** to notify any errors on the API call
 - **Jest** and **React Testing Library** for the tests
+- **ESLint** and **Prettier** to find and fix problems with code and enforce code style
+- **Husky** and **Lint-staged** to assure code is within pattern before commiting and tests are passing
