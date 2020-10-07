@@ -1,5 +1,7 @@
 # Weather Application
 
+![Map image](https://github.com/luizamendes/weather-modec/blob/main/src/assets/map-image.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to run
