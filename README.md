@@ -4,10 +4,22 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to run
 
-### `npm start` or `yarn start`
+### `npm install`
 
-This will run the app in the development mode.<br />
+To install dependencies
+
+### `npm start`
+
+To run the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `npm test`
+
+To run the tests in watch mode.<br />
+
+### `npm build`
+
+To build the project to production.<br />
 
 ## Usage
 
@@ -28,4 +40,5 @@ If you wish to reset your search, just click anywhere else on the map and click 
 - **Axios** to perform the HTTP request to the weather API
 - **Font Awesome** for the pin icon
 - **Open Weather Map** API
-- **React toastify** To notify any errors on the API call
+- **React toastify** to notify any errors on the API call
+- **Jest** and **React Testing Library** for the tests

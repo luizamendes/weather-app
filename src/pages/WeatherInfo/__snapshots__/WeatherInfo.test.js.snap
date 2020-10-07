@@ -34,13 +34,12 @@ exports[`WeatherInfo page Snapshot renders correctly 1`] = `
       0
        °C
     </p>
-    <a
+    <button
       className="button"
-      href="/"
       onClick={[Function]}
     >
       Return to map
-    </a>
+    </button>
   </div>
 </div>
 `;

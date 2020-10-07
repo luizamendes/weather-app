@@ -35,7 +35,7 @@ export const WeatherInfo = () => {
           <spam>Minimum temperature: </spam>
           {minTemp} °C
         </p>
-        <Button link="/">Return to map</Button>
+        <Button onClick={() => window.close()}>Return to map</Button>
       </div>
     </div>
   );
