@@ -1,11 +1,11 @@
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import { render, fireEvent, screen } from "@testing-library/react";
-import renderer from "react-test-renderer";
-import { Button } from "./Button";
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { render, fireEvent, screen } from '@testing-library/react';
+import renderer from 'react-test-renderer';
+import { Button } from './Button';
 
-describe("Buttom component Snapshot", () => {
-  it("renders a button", () => {
+describe('Buttom component Snapshot', () => {
+  it('renders a button', () => {
     const tree = renderer
       .create(
         <Router>
@@ -17,7 +17,7 @@ describe("Buttom component Snapshot", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("renders a anchor tag", () => {
+  it('renders a anchor tag', () => {
     const tree = renderer
       .create(
         <Router>
@@ -30,8 +30,8 @@ describe("Buttom component Snapshot", () => {
   });
 });
 
-describe("Testing functionality", () => {
-  it("should execute onClick function when clicked", () => {
+describe('Testing functionality', () => {
+  it('should execute onClick function when clicked', () => {
     const handleOnClick = jest.fn();
 
     render(
@@ -40,7 +40,7 @@ describe("Testing functionality", () => {
       </Router>
     );
 
-    fireEvent.click(screen.getByText("Click me"));
+    fireEvent.click(screen.getByText('Click me'));
     expect(handleOnClick).toHaveBeenCalledTimes(1);
   });
 });

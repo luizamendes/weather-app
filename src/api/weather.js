@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 const openApiKey = process.env.REACT_APP_OPENAI_KEY;
 

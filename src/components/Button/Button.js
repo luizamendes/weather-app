@@ -1,8 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./index.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import './index.css';
 
-export const Button = ({ children, link, ...props }) => {
+const Button = ({ children, link, ...props }) => {
   if (link) {
     return (
       <Link {...props} className="button" to={link}>
@@ -11,8 +12,19 @@ export const Button = ({ children, link, ...props }) => {
     );
   }
   return (
-    <button {...props} className="button">
+    <button type="button" {...props} className="button">
       {children}
     </button>
   );
 };
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  link: PropTypes.string,
+};
+
+Button.defaultProps = {
+  link: '',
+};
+
+export { Button };

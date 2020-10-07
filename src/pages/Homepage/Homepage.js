@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { fetchWeather } from "../../api/weather";
-import { Button } from "../../components/Button";
-import { MapComponent } from "../../components/MapComponent";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import "./index.css";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { fetchWeather } from '../../api/weather';
+import { Button } from '../../components/Button';
+import { MapComponent } from '../../components/MapComponent';
+import 'react-toastify/dist/ReactToastify.css';
+import './index.css';
 
 export const Homepage = () => {
   const [selectedSpot, setSelectedSpot] = useState(null);
@@ -18,7 +18,7 @@ export const Homepage = () => {
       const { data } = await fetchWeather(lat, lng);
       setNearestCities(data.list);
     } catch (error) {
-      toast.error("Erro: ", error.message);
+      toast.error('Erro: ', error.message);
     }
   };
 

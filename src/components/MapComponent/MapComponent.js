@@ -1,7 +1,8 @@
-import React from "react";
-import { Map, TileLayer, Marker } from "react-leaflet";
-import { LocationIcon } from "./LocationIcon";
-import "leaflet/dist/leaflet.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Map, TileLayer, Marker } from 'react-leaflet';
+import { LocationIcon } from './LocationIcon';
+import 'leaflet/dist/leaflet.css';
 
 const MapComponent = ({ selectedSpot, setSelectedSpot }) => {
   const handleClick = (e) => {
@@ -29,6 +30,11 @@ const MapComponent = ({ selectedSpot, setSelectedSpot }) => {
       )}
     </Map>
   );
+};
+
+MapComponent.propTypes = {
+  selectedSpot: PropTypes.PropTypes.objectOf(PropTypes.string).isRequired,
+  setSelectedSpot: PropTypes.func.isRequired,
 };
 
 export { MapComponent };

@@ -1,10 +1,10 @@
-import React from "react";
-import { ToastContainer } from "react-toastify";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import "react-toastify/dist/ReactToastify.css";
+import React from 'react';
+import { ToastContainer } from 'react-toastify';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
 
-import { Homepage } from "./pages/Homepage";
-import { WeatherInfo } from "./pages/WeatherInfo";
+import { Homepage } from './pages/Homepage';
+import { WeatherInfo } from './pages/WeatherInfo';
 
 const App = () => (
   <>
