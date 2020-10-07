@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { fetchWeather } from "../../api";
+import { fetchWeather } from "../../api/weather";
 import { Button } from "../../components/Button";
 import { MapComponent } from "../../components/MapComponent";
 import { toast } from "react-toastify";
