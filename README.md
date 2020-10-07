@@ -10,6 +10,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 To install dependencies
 
+## Set your .env file
+
+Before you run, you need to create an .env file in the root of the folder and set your API key, just like below.
+
+```
+REACT_APP_OPENAI_KEY=<Your Open Weather Map APP_ID>
+```
+
 ### `npm start`
 
 To run the app in the development mode.<br />
