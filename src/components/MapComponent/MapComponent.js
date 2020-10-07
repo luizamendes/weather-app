@@ -12,10 +12,10 @@ const MapComponent = ({ selectedSpot, setSelectedSpot }) => {
   return (
     <Map
       center={{
-        lat: -22.9035,
-        lng: -43.2096,
+        lat: -15.2,
+        lng: -56.37,
       }}
-      zoom={12}
+      zoom={5}
       onClick={handleClick}
     >
       <TileLayer
@@ -33,8 +33,12 @@ const MapComponent = ({ selectedSpot, setSelectedSpot }) => {
 };
 
 MapComponent.propTypes = {
-  selectedSpot: PropTypes.PropTypes.objectOf(PropTypes.string).isRequired,
+  selectedSpot: PropTypes.objectOf(PropTypes.number),
   setSelectedSpot: PropTypes.func.isRequired,
+};
+
+MapComponent.defaultProps = {
+  selectedSpot: { lat: 0, lng: 0 },
 };
 
 export { MapComponent };

@@ -4,7 +4,7 @@ import icon from '../../assets/map-marker-alt-solid.svg';
 export const LocationIcon = L.icon({
   iconUrl: icon,
   iconRetinaUrl: icon,
-  iconAnchor: null,
+  iconAnchor: [17, 35],
   shadowUrl: null,
   shadowSize: null,
   shadowAnchor: null,
