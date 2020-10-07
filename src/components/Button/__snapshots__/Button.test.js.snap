@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Buttom component Snapshot renders a anchor tag 1`] = `
+<a
+  className="button"
+  href="/something"
+  onClick={[Function]}
+>
+  Click Me
+</a>
+`;
+
+exports[`Buttom component Snapshot renders a button 1`] = `
+<button
+  className="button"
+>
+  Click Me
+</button>
+`;

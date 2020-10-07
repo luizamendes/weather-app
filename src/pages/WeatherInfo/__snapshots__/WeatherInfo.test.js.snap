@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherInfo page Snapshot renders correctly 1`] = `
+<div
+  className="weather-info"
+>
+  <div
+    className="weather-info__content"
+  >
+    <h2>
+      Temperature
+    </h2>
+    <h3>
+      
+    </h3>
+    <p>
+      <spam>
+        Current temperature: 
+      </spam>
+      0
+       °C
+    </p>
+    <p>
+      <spam>
+        Maximum temperature: 
+      </spam>
+      0
+       °C
+    </p>
+    <p>
+      <spam>
+        Minimum temperature: 
+      </spam>
+      0
+       °C
+    </p>
+    <a
+      className="button"
+      href="/"
+      onClick={[Function]}
+    >
+      Return to map
+    </a>
+  </div>
+</div>
+`;

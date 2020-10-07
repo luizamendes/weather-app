@@ -1,0 +1,33 @@
+.button {
+  width: 18vw;
+  height: 3rem;
+  margin: 1rem auto 1rem;
+  padding: 0.5rem;
+  background-color: #ff0000;
+  border: 0;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ff8c00;
+}
+
+.button:disabled,
+.button:disabled:hover {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+a.button {
+  display: block;
+  width: auto;
+  height: auto;
+  font-size: 1em;
+  padding: 0.5rem 3rem;
+  text-decoration: none;
+  text-align: center;
+}

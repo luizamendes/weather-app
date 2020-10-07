@@ -1,0 +1,30 @@
+.weather-info {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #e7e7e7;
+}
+
+.weather-info__content {
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 6rem;
+  border-left: 3px solid #ff8c00;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.weather-info__content h2 {
+  margin-bottom: 0;
+}
+
+.weather-info__content p {
+  margin: 0.5rem 0;
+}
+
+.weather-info__content p spam {
+  font-weight: bold;
+}

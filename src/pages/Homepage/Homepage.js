@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { fetch } from "../../api";
+import { fetchWeather } from "../../api";
+import { Button } from "../../components/Button";
 import { MapComponent } from "../../components/MapComponent";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -9,13 +10,12 @@ import "./index.css";
 export const Homepage = () => {
   const [selectedSpot, setSelectedSpot] = useState(null);
   const [nearestCities, setNearestCities] = useState([]);
-  console.log("App -> nearestCities", nearestCities);
 
   const handleFetch = async () => {
     const { lat, lng } = selectedSpot;
 
     try {
-      const { data } = await fetch(lat, lng);
+      const { data } = await fetchWeather(lat, lng);
       setNearestCities(data.list);
     } catch (error) {
       toast.error("Erro: ", error.message);
@@ -39,6 +39,8 @@ export const Homepage = () => {
             return (
               <li key={id}>
                 <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
                   to={`/weather?place=${name}&max=${temp_max}&min=${temp_min}&current=${temp}`}
                 >
                   {name}
@@ -53,22 +55,19 @@ export const Homepage = () => {
 
   return (
     <>
-      <div className="app">
+      <main className="app">
         <MapComponent
           selectedSpot={selectedSpot}
           setSelectedSpot={setSelectedSpot}
         />
-        <div className="controls">
-          <button
-            disabled={!selectedSpot}
-            className="search-btn"
-            onClick={handleFetch}
-          >
+        <nav className="controls">
+          <p>Select a place on the map and click search</p>
+          <Button disabled={!selectedSpot} onClick={handleFetch}>
             Search
-          </button>
+          </Button>
           {renderCityList()}
-        </div>
-      </div>
+        </nav>
+      </main>
     </>
   );
 };

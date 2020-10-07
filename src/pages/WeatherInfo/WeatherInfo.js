@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Button } from "../../components/Button";
 import "./index.css";
 
-export const CityInfo = () => {
+export const WeatherInfo = () => {
   const [place, setPlace] = useState("");
   const [maxTemp, setMaxTemp] = useState(0);
   const [minTemp, setMinTemp] = useState(0);
@@ -18,11 +19,24 @@ export const CityInfo = () => {
   }, [queryString]);
 
   return (
-    <>
-      <h2>Temperature at: {place}</h2>
-      <p>Current temperature: {currentTemp}</p>
-      <p>Maximum temperature: {maxTemp}</p>
-      <p>Minimum temperature: {minTemp}</p>
-    </>
+    <div className="weather-info">
+      <div className="weather-info__content">
+        <h2>Temperature</h2>
+        <h3>{place}</h3>
+        <p>
+          <spam>Current temperature: </spam>
+          {currentTemp} °C
+        </p>
+        <p>
+          <spam>Maximum temperature: </spam>
+          {maxTemp} °C
+        </p>
+        <p>
+          <spam>Minimum temperature: </spam>
+          {minTemp} °C
+        </p>
+        <Button link="/">Return to map</Button>
+      </div>
+    </div>
   );
 };

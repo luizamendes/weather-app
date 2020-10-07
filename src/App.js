@@ -4,14 +4,14 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 
 import { Homepage } from "./pages/Homepage";
-import { CityInfo } from "./pages/CityInfo";
+import { WeatherInfo } from "./pages/WeatherInfo";
 
 const App = () => (
   <>
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Homepage} />
-        <Route exact path="/weather" component={CityInfo} />
+        <Route exact path="/weather" component={WeatherInfo} />
       </Switch>
       <ToastContainer
         position="bottom-right"
