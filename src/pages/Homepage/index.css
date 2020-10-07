@@ -38,3 +38,14 @@
 .controls ul li:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 414px) {
+  .app {
+    flex-direction: column-reverse;
+  }
+
+  .leaflet-container {
+    width: 100vw;
+    height: 80vh;
+  }
+}

@@ -1,8 +1,7 @@
 .button {
-  width: 18vw;
   height: 3rem;
   margin: 1rem auto 1rem;
-  padding: 0.5rem;
+  padding: 0.5rem 3rem;
   background-color: #ff0000;
   border: 0;
   border-radius: 0.5rem;
@@ -27,7 +26,6 @@ a.button {
   width: auto;
   height: auto;
   font-size: 1em;
-  padding: 0.5rem 3rem;
   text-decoration: none;
   text-align: center;
 }
