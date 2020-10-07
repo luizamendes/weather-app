@@ -18,25 +18,26 @@ exports[`WeatherInfo page Snapshot renders correctly 1`] = `
         Current temperature: 
       </spam>
       0
-       °C
+      °C
     </p>
     <p>
       <spam>
         Maximum temperature: 
       </spam>
       0
-       °C
+      °C
     </p>
     <p>
       <spam>
         Minimum temperature: 
       </spam>
       0
-       °C
+      °C
     </p>
     <button
       className="button"
       onClick={[Function]}
+      type="button"
     >
       Return to map
     </button>
