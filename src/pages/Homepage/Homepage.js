@@ -23,6 +23,7 @@ export const Homepage = () => {
       toast.error(`Erro: ${error.response.data.message || 'Unexpected error'}`);
     } finally {
       setSearchButtonText('Search');
+      window.scrollTo(0, 0);
     }
   };
 
