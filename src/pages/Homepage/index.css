@@ -50,4 +50,8 @@
     width: 100vw;
     height: 80vh;
   }
+
+  .controls p {
+    margin-top: 1rem;
+  }
 }
