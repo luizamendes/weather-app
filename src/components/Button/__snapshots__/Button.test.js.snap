@@ -10,9 +10,18 @@ exports[`Buttom component Snapshot renders a anchor tag 1`] = `
 </a>
 `;
 
-exports[`Buttom component Snapshot renders a button 1`] = `
+exports[`Buttom component Snapshot renders a primary button 1`] = `
 <button
   className="button"
+  type="button"
+>
+  Click Me
+</button>
+`;
+
+exports[`Buttom component Snapshot renders a secondary button 1`] = `
+<button
+  className="button button-secondary"
   type="button"
 >
   Click Me

@@ -5,11 +5,23 @@ import renderer from 'react-test-renderer';
 import { Button } from './Button';
 
 describe('Buttom component Snapshot', () => {
-  it('renders a button', () => {
+  it('renders a primary button', () => {
     const tree = renderer
       .create(
         <Router>
           <Button>Click Me</Button>
+        </Router>
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders a secondary button', () => {
+    const tree = renderer
+      .create(
+        <Router>
+          <Button secondary>Click Me</Button>
         </Router>
       )
       .toJSON();

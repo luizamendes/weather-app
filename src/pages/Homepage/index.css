@@ -15,12 +15,14 @@
 }
 
 .controls p {
+  margin-top: 2rem;
   text-align: center;
   font-weight: bold;
   line-height: 1.5rem;
 }
 
 .controls ul {
+  margin-top: 0;
   padding: 0;
 }
 

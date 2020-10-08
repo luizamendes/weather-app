@@ -12,8 +12,8 @@ const MapComponent = ({ selectedSpot, setSelectedSpot }) => {
   return (
     <Map
       center={{
-        lat: -15.2,
-        lng: -56.37,
+        lat: -19.48,
+        lng: -46.54,
       }}
       zoom={5}
       onClick={handleClick}

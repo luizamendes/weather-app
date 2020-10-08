@@ -10,15 +10,19 @@ import './index.css';
 export const Homepage = () => {
   const [selectedSpot, setSelectedSpot] = useState(null);
   const [nearestCities, setNearestCities] = useState([]);
+  const [searchButtonText, setSearchButtonText] = useState('Search');
 
   const handleFetch = async () => {
     const { lat, lng } = selectedSpot;
 
     try {
+      setSearchButtonText('Searching...');
       const { data } = await fetchWeather(lat, lng);
       setNearestCities(data.list);
     } catch (error) {
-      toast.error('Erro: ', error.message);
+      toast.error(`Erro: ${error.response.data.message || 'Unexpected error'}`);
+    } finally {
+      setSearchButtonText('Search');
     }
   };
 
@@ -31,6 +35,9 @@ export const Homepage = () => {
 
     return (
       <>
+        <Button secondary onClick={() => setNearestCities([])}>
+          Clear results
+        </Button>
         <p>Click on one place to see more details</p>
         <ul>
           {nearestCities.map((city) => {
@@ -63,7 +70,7 @@ export const Homepage = () => {
         <nav className="controls">
           <p>Select a place on the map and click search</p>
           <Button disabled={!selectedSpot} onClick={handleFetch}>
-            Search
+            {searchButtonText}
           </Button>
           {renderCityList()}
         </nav>
